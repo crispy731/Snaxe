@@ -9,6 +9,7 @@ body {
    padding-left: 0;
    padding-right: 0;
    width: 100%;
+   color: Black;
 }
 
 .navbar {
@@ -22,7 +23,9 @@ body {
     justify-content: space-between;
     padding: .5rem 1.2rem;
 }
-
+nav a {
+ color: Black;
+}
 .text-center {
   text-align: center;
   color: lightgreen;
@@ -51,9 +54,14 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-areas: "Box-1 Box-2 Box-3" "Box-4 Box-5 Box-6" "Box-7 Box-8 Box-9";
+  box-sizing: border-box;
+  max-height: 100%;
+  max-width: 100%;
+  width: 100%;
+  justify-content: center;
+  padding: none;
+  margin: none;
 }
-
-{box-sizing: border-box;}
 
 
 
@@ -140,8 +148,7 @@ body {
 .Box-1 { 
   grid-area: Box-1;
   text-align: center;
-  color: LightGreen;
-  
+  background-color: LightGreen;
  }
 
 .Box-2 { 
@@ -163,17 +170,34 @@ body {
 .Box-9 { grid-area: Box-9; }
 
 .Box-1, .Box-2, .Box-3 {
-  border-top: 2px solid LightGreen;
+  border: 1px solid Black;
   margin-top: 1px;
-  height: 67.5533px;
+  background-color: #DCDCDC;
 }
 
 .Box-4, .Box-5, .Box-6 {
-  height: 67.5533px;
+ background-color: #B4B4B4;
+ border: 1px solid Black;
+ margin-top: 1px;
 }
 
 .Box-7, .Box-8, .Box-9 {
-  height: 67.5533px;
+ background-color: #DCDCDC;
+ border: 1px solid Black;
+  margin-top: 1px;  
+}
+
+.Box-1, .Box-2, .Box-3, .Box-4, .Box-5, .Box-6, .Box-7, .Box-8, .Box-9{
+  height: 12.1rem;
+  text-align: center;
+}
+
+.Box-1, .Box-3, .Box-7, .Box-9{
+  background-color: #19bd42;
+  text-transform: none;
+}
+.guide {
+  color:#d9ded7;
 }
 
 /* End Body Box Stuff */
@@ -183,3 +207,87 @@ body {
 .sn_hi {
   color: lightgreen;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sign Up */ 
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button2 {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup2 {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px inset #f1f1f1;
+  z-index: 1;
+}
+
+/* Add styles to the form container */
+.form-container2 {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container2 input[type=text], .form-container2 input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container2 input[type=text]:focus, .form-container2 input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container2 .btn2 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container2 .cancel2 {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container2 .btn:hover2, .open-button2:hover {
+  opacity: 1;
+}
+
+/* End Sign Up */ 
